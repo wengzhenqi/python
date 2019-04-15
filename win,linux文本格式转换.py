@@ -3,11 +3,11 @@ import sys
 def unix2doc(fname):
     dst_fname = fname + '.txt'
     with open(fname) as src_fobj:
-        with open(dst_fname, 'w') as dst_fname:
+        with open(dst_fname, 'w') as dst_fobj:
             for line in src_fobj:
                 line = line.rstrip() + '\r\n'
 
-                dst_fname.write()
+                dst_fname.write(line)
 
         
 if __name__ == '__main__':
