@@ -22,4 +22,4 @@ if __name__ == '__main__':
     
     
     
-    #wk '{ip[$1]++} END{for(i in ip) {print i,ip[i]}}' /var/log/httpd/access_log | sort -nr | head -5
+    # awk '{ip[$1]++} END{for(i in ip) {print i,ip[i]}}' /var/log/httpd/access_log | sort -nr | head -5
