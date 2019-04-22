@@ -19,3 +19,7 @@ if __name__ == '__main__':
     br = 'Chrome|Firefox|MSIE'
     print(count_patt(fname, ip))
     print(count_patt(fname, br))
+    
+    
+    
+    #wk '{ip[$1]++} END{for(i in ip) {print i,ip[i]}}' /var/log/httpd/access_log | sort -nr | head -5
