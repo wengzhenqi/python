@@ -1,0 +1,16 @@
+天气预报：
+实况天气: http://www.weather.com.cn/data/sk/城市代码.html
+城市信息: http://www.weather.com.cn/data/cityinfo/城市代码.html
+详细指数: http://www.weather.com.cn/data/zs/城市代码.html
+搜索 中国天气网 城市代码 ，可以得到全国各地区的代码
+如：
+http://www.weather.com.cn/data/sk/101010100.html
+>>> from urllib import request
+>>> r = request.urlopen('http://www.weather.com.cn/data/sk/101010100.html')
+>>> data = r.read()
+>>> import json
+>>> json.loads(data)
+{'weatherinfo': {'city': '北京', 'cityid': '101010100', 'temp': '27.9', 'WD': '\u5357\u98ce', 'WS': '\u5c0f\u4e8e3\u7ea7', 'SD': '28%', 'AP': '1002hPa', 'njd': '\u6682\u65e0\u5b9e\u51b5', 'WSE': '<3', 'time': '17:55', 'sm': '2.1', 'isRadar': '1', 'Radar': 'JC_RADAR_AZ9010_JB'}}
+>>> wdict = json.loads(data)
+>>> wdict
+>>> wdict['weatherinfo']['city']

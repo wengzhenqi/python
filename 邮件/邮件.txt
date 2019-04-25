@@ -1,0 +1,26 @@
+邮件编程：
+
+#标准邮件需要三个头部信息
+    # From : 发件人
+    # To : 收件人
+    # Subject: 主题
+
+1、准备邮件
+>>> from email.mime.text import MIMEText
+# 书写正文，邮件是纯文本
+>>> message = MIMEText('My email test.\r\n', 'plain', 'utf8')
+# 编写头部信息
+>>> from email.header import Header
+>>> message['From'] = Header('root', 'utf8')
+>>> message['To'] = Header('zhangsan', 'utf8')
+>>> message['Subject'] = Header('py mail test', 'utf8')
+2、发送邮件
+>>> import smtplib
+>>> smtp = smtplib.SMTP()
+>>> smtp.connect('127.0.0.1')
+>>> smtp.sendmail('root', ['root', 'zhangsan'], message.as_string())
+>>> smtp.close()
+# mail
+# su - zhangsan
+$ mail
+
