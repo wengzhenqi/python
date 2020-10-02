@@ -70,6 +70,24 @@
 
 
 #牌照摇号小程序
-import random
+# import random
+# while 1:
+#     a = random.choice("QWERTYUIOPASDFGHJKLZXCVBNM")        #生成一个随机数
+#     print(a)
+#
+#     if a == "c":
+#         break
+
+# import random
+# import string
+# str = (string.ascii_uppercase + string.digits)        #全部的大写字母和数字
+# a = random.sample(str,5)                            #随机生成5个字符
+# b = "".join(a)                                      #因为拼接出来的是列表，使用join方法拼接成整体
+# # print(b)
+# m = string.ascii_uppercase
+# n = random.choice(m)
+# for i in n:
+#     print("京"+n,b)
+
 
 
